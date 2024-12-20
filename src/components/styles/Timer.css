@@ -1,0 +1,95 @@
+.timer-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #e0e5ec, #ffffff);
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+      -5px -5px 15px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    width: 100%;
+  }
+  
+  .timer-display {
+    font-family: "Digital-7 Mono", monospace;
+    font-size: 3.5rem;
+    color: #333;
+    letter-spacing: 0.05em;
+    padding: 15px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .button-group button {
+    font-family: "Arial", sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2),
+      -5px -5px 10px rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    width: 150px;
+  }
+  
+  .button-group button:disabled {
+    background: linear-gradient(145deg, #cccccc, #dddddd);
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .button-group button:hover:not(:disabled) {
+    transform: scale(1.1);
+    background: linear-gradient(145deg, #ff512f, #dd2476);
+  }
+  
+  @media (max-width: 768px) {
+    .timer-container {
+      padding: 15px;
+    }
+  
+    .timer-display {
+      font-size: 2.5rem;
+      padding: 10px;
+    }
+  
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .button-group button {
+      width: 100%;
+      padding: 12px 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timer-container {
+      padding: 10px;
+    }
+  
+    .timer-display {
+      font-size: 2rem;
+      padding: 8px;
+    }
+  
+    .button-group button {
+      width: 100%;
+      font-size: 1rem;
+    }
+  }
